@@ -73,18 +73,19 @@ void mergeSort(int* arr, int l, int r)
 
 int main()
 {
-	bool printArray = false;
+	bool printArray = true;
 	srand(0);
-	int n = 9'999'999;
+	int n = 999;
 	int* array = new int[n];
 	for (int i = 0; i < n; i++)
 		array[i] = rand() % 50000;
 
 	if (printArray)
 	{
-		std::cout << "Unsorted array:" << std::endl;
+		std::cout << "\nUnsorted array:" << std::endl;
 		for (int i = 0; i < n; ++i)
 			std::cout << array[i] << " ";
+		std::cout << std::endl;
 	}
 	time_t start, end;
 
@@ -100,7 +101,7 @@ int main()
 		for (int i = 0; i < n; ++i)
 			std::cout << array[i] << " ";
 	}
-	std::cout << "Time elapsed: " << seconds << std::endl;
+	std::cout << "\nTime elapsed: " << seconds << std::endl;
 	delete[] array;
 	return 0;
 }
