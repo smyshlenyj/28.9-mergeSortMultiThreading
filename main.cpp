@@ -73,9 +73,9 @@ void mergeSort(int* arr, int l, int r)
 
 int main()
 {
-	bool printArray = true;
+	bool printArray = false;
 	srand(0);
-	int n = 999;
+	int n = 9'999'999;
 	int* array = new int[n];
 	for (int i = 0; i < n; i++)
 		array[i] = rand() % 50000;
@@ -93,7 +93,7 @@ int main()
 	mergeSort(array, 0, n - 1);
 	time(&end);
 
-	double seconds = difftime(end, start);
+	int seconds = difftime(end, start);
 
 	if (printArray)
 	{
