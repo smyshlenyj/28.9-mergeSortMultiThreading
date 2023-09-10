@@ -54,7 +54,7 @@ void mergeSort(int* arr, int l, int r)
 	int m = (l + r - 1) / 2;
 	if (l < r)
 	{
-		if (m - l > 20000)
+		if (m - l > 4'000'000)
 		{
 			std::future <void> left = std::async(std::launch::async, mergeSort, arr, l, m);
 			std::future <void> right = std::async(std::launch::async, mergeSort, arr, m + 1, r);
